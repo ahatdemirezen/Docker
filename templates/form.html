@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Art Generator</title>
+  <link rel="stylesheet" href="/templates/style.css">
+
+</head>
+<body>
+  <label id="copyright">© 2024 Abdulkadir Kattaş & Ahat Demirezen</label>
+  <h1>Welcome to ASCII Art Generator</h1>
+  <h4 id="description">This site turns what you write into ascii art. If you want to try it, just write something random in the "YOUR STRING" section and then press the "GENERATE" button.</h4>
+  <div>
+    <form id="asciiForm" method="POST" action="/" target="output">     
+      <label for="asciiArt">YOUR STRING</label><br>
+      <textarea id="asciiArt" name="str" rows="4" placeholder="Write your ASCII art..."></textarea><br>
+      <label for="banner">BANNER</label><br>
+      <select id="banner" name="banner">
+        <option value="standard">Standard</option>
+        <option value="shadow">Shadow</option>
+        <option value="thinkertoy">Thinkertoy</option>
+      </select><br>
+      <input id="generateButton" type="submit" value="GENERATE">
+    </form>
+  </div>
+  <div id="result">
+    <div id="outputContainer">
+      <iframe name="output" id="output"></iframe>
+    </div>
+  </div>
+</body>
+</html>

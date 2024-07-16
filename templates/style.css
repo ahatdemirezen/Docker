@@ -1,0 +1,83 @@
+body {
+    background-color: #111;
+    color: #00FF00; /* Lime Green */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 50px;
+    margin: 0;
+  }
+  h1 {
+    animation: neon 1.5s ease-in-out infinite alternate;
+    text-align: center;
+  }
+  @keyframes neon {
+    from {
+      text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 40px #00FF00, 0 0 80px #00FF00;
+    }
+    to {
+      text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 40px #00FF00, 0 0 80px #00FF00, 0 0 100px #00FF00, 0 0 150px #00FF00;
+    }
+  }
+  form {
+    text-align: center;
+    margin-top: 20px;
+  }
+  #result {
+    display: flex;
+    text-align: left;
+    margin-top: 10px;
+  }
+  select, input[type="submit"] {
+    border: 1px solid #00FF00; /* Lime Green */
+    background-color: #111;
+    color: #00FF00; /* Lime Green */
+    padding: 8px;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  input[type="submit"]:hover {
+    background-color: #00FF00; /* Lime Green */
+    color: #111;
+    transform: scale(1.1);
+  }
+  label {
+    color: #00FF00; /* Lime Green */
+    font-size: 16px;
+  }
+  #asciiArt {
+    border: 1px solid #00FF00; /* Lime Green */
+    background-color: #111;
+    color: #00FF00; /* Lime Green */
+    padding: 8px;
+    margin-top: 10px;
+    width: 30%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    resize: vertical;
+    overflow-y: auto;
+  }
+  #outputContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #output {
+    width: 100%;
+    scrollbar-width: auto;
+    height: 250px;
+    border: none;
+  }
+  #copyright {
+    font-size: 15px;
+    size: 20px;
+    position: fixed;
+    bottom: 0%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #00FF00; /* Lime Green */
+  }
+  #description {
+    text-align: center;
+    border-style:groove;
+    border-color: #00FF00;
+  }
