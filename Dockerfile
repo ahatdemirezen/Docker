@@ -1,15 +1,14 @@
 FROM golang:1.22.2-alpine
 RUN mkdir app
-# run mkdir app = çalışılacak dizede  build adında klasör oluşturur veya  çalışma dizini oluşturur
+# run mkdir app = creates a folder named build in the working directory or creates a working directory
 WORKDIR /app  
-# workdır /app = dockerfilede belirtilen containerin çalışma dizinini belirler çalışma dizinini app olarak belirler
-
+# workdır /app = sets the working directory of the container specified in dockerfile sets the working directory to app
 COPY . .
-# ilk nokta dockerfile içinde bulunduğu tüm dosyaları ifade eder onları ele alır 
-# ikinci nokta gönderileceği yeri temsil eder yani app 'i '
+# The first dot in the dockerfile refers to all the files found in the dockerfile and handles them 
+# the second dot represents where to send, i.e. app 'i'
 RUN go build -o ascii-art-dockerize . 
-# bu kısımda  derleme işlemi yapılır -o isminin verildiği kısım ascii.. adında go build ise = derleme komutu
+# this is where the build is done - the part named -o is ascii... named go build if = build command
 ENTRYPOINT [ "./ascii-art-dockerize" ]
-# entrypoınt çalıştıralacağını belirtir . = çalışma dizinini belirtir. asciiart.. = dosyasının yürütülmesini sağlar.
+# specifies the entrypoınt to run . = specifies the working directory. asciiart... = file to be executed.
 EXPOSE 8080
-# çalışacapı portal        
+# portal to work        
